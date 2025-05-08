@@ -4,7 +4,7 @@ import numpy as np
 
 model = YOLO("yolov8m.pt")
 
-path = "C:/Users/User/Documents/GitHub/construction-safety-vision/videos/video4.mp4"
+path = "C:/Users/User/Documents/GitHub/construction-safety-vision/videos/video5.mp4"
 cap = cv2.VideoCapture(path)
 
 fps = cap.get(cv2.CAP_PROP_FPS)
@@ -13,10 +13,10 @@ frame_delay = int(1000 / fps) * 2
 prev_centers = {}
 frame_count = {}
 motion_threshold = 60
-min_frames_for_bruise = 4
+min_frames_for_bruise = 1
 
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-out = cv2.VideoWriter('C:/Users/User/Documents/GitHub/construction-safety-vision/resultados2/resultado_video4_m.pt.mp4',
+out = cv2.VideoWriter('C:/Users/User/Documents/GitHub/construction-safety-vision/resultados2/resultado_video5_m.pt.mp4',
                       fourcc, fps, (int(cap.get(3)), int(cap.get(4))))
 
 while True:
